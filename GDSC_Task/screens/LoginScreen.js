@@ -39,18 +39,7 @@ const LoginScreen = () => {
   };
 
   const handleForgotPassword = () => {
-    if (!email) {
-      alert('Please enter your email address');
-      return;
-    }
-
-    sendPasswordResetEmail(auth, email)
-      .then(() => {
-        alert('Password reset email sent! Check your inbox.');
-      })
-      .catch(error => {
-        alert(error.message);
-      });
+    navigation.navigate('ForgotPassword')
   };
 
   return (
