@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { auth } from '../firebase';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail } from 'firebase/auth';
+import SignInGoogle from '../components/SignInGoogle';
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
@@ -70,6 +71,8 @@ const LoginScreen = () => {
         <TouchableOpacity onPress={handleForgotPassword} style={styles.forgotPasswordButton}>
           <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
         </TouchableOpacity>
+
+        <SignInGoogle />
       </View>
     </KeyboardAvoidingView>
   );
