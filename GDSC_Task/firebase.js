@@ -1,8 +1,9 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
+// Import the necessary Firebase modules
+import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
+import { getStorage } from 'firebase/storage';
 
-// Your web app's Firebase configuration
+// Your Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyA-GsWAvy250MsEZiAST5XWBpNvn7GNdZ8",
   authDomain: "fir-auth-53a83.firebaseapp.com",
@@ -14,6 +15,9 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);  // Memory persistence (no AsyncStorage in Expo Go)
 
-export { auth };
+// Initialize Firebase Authentication and Storage
+const auth = getAuth(app);
+const storage = getStorage(app);  // Firebase Storage initialization
+
+export { auth, storage };
