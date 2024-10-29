@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "GDSC_Task",
+    "slug": "GDSC_Task",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "INTERNET",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "googleServicesFile": "./google-services.json",
+      "package": "com.yojitkapoor.GDSC_Task"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0b4718f4-e6bd-439e-a201-ed9f1c93e38f"
+      }
+    },
+    "scheme": "mycode"
+  }
+}
